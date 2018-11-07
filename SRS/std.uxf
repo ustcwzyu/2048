@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>220</x>
+      <y>150</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Start</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>500</x>
+      <y>150</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>Game</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLState</id>
+    <coordinates>
+      <x>370</x>
+      <y>260</y>
+      <w>100</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>GameOver</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>90</y>
+      <w>300</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>PressStart
+lt=-&gt;</panel_attributes>
+    <additional_attributes>10.0;60.0;10.0;20.0;280.0;20.0;280.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>180</y>
+      <w>260</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>PressKeyAndCheckFail
+lt=-&gt;</panel_attributes>
+    <additional_attributes>90.0;10.0;90.0;100.0;10.0;100.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>270</x>
+      <y>180</y>
+      <w>120</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Return
+lt=-&gt;</panel_attributes>
+    <additional_attributes>100.0;100.0;10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>540</x>
+      <y>150</y>
+      <w>200</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>PressKeyAndCheckSuccess
+lt=-&gt;</panel_attributes>
+    <additional_attributes>30.0;40.0;30.0;70.0;160.0;70.0;160.0;10.0;60.0;10.0</additional_attributes>
+  </element>
+</diagram>
