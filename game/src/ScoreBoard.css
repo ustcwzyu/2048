@@ -1,0 +1,83 @@
+.scoreBoard{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-between;
+  }
+  .scoreBoard .title{
+    width: 46%;
+    font-size: 72px;
+    margin: 0;
+    line-height: .8em;
+  }
+    .text{
+    margin: 12px 0;
+    font-size: 16px;
+  }
+  .text .bold{
+    font-weight: bold;
+  }
+  .newGame{
+    padding: 5px 0;
+    width: 25%;
+    border: 0;
+    background: #847363;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    outline: 0;
+  }
+  .newGame:hover{
+    background: #9c8c7c;
+  }
+  .newGame:active{
+    background: #807060;
+  }
+  .scorebox{
+    width: 25%;
+    font-weight: bold;
+    color: #faf8ef;
+    text-align: center;
+    position: relative;
+    background: #bbada0;
+    padding: 5px 0;
+    border-radius: 5px;
+  }
+  .scorebox .scorelable{
+    font-size: 14px;
+  }
+  .scorebox .score{
+    font-size: 28px;
+    color: white;
+  }
+  .scorebox .additionScore{
+    font-size: 26px;
+    color: #776e65;
+    position: absolute;
+    display: table;
+    margin: auto;
+    width: 40%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: a-raise-up .6s linear both;
+  }
+  @keyframes a-raise-up{
+    from{
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    50%{
+      opacity: 1;
+      transform: translate3d(0, -100%, 0);
+    }
+    to {
+      opacity: 0;
+      transform: translate3d(0, -200%, 0);
+    }
+  }
+  
