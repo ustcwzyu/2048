@@ -1,2 +1,2 @@
 ## Game 2048
-play at [2048]("https://ustcwzy.github.io/game")
+play at <a href = "https://ustcwzyu.github.io/2048">game</a>
