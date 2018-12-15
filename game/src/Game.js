@@ -23,13 +23,16 @@ export default class Game extends Component {
         this.newTile();
         this.newTile();
         this.handleKeyPress = this.handleKeyPress.bind(this);
+        //Add key press listener
         window.addEventListener('keydown', this.handleKeyPress);
     }
 
     componentWillMount() {
+        //Remove the listener
         window.removeEventListener('keydown', this.handleKeyPress);
     }
 
+    //Handle the event of key press
     handleKeyPress (event) {
         let {key} = event;
         if (!this.state.gameStarted) return;
@@ -50,6 +53,7 @@ export default class Game extends Component {
             }
         }
         return {
+            //Initialize the props of the components
             size, cells,
             gameStarted: true,
             additionScores: [],
@@ -64,6 +68,7 @@ export default class Game extends Component {
         );
     }
 
+    //Generate the new tile
     newTile() {
         this.setState(state => {
             let cells = this.state.cells;
@@ -80,6 +85,7 @@ export default class Game extends Component {
                 let index = Math.floor(Math.random() * emptyCells.length);
                 let [row, cell] = emptyCells[index];
                 cells[row][cell] = {
+                    //the probability of the generated number
                     number: Math.random() > 0.9 ? 4 : 2,
                     newGenerated:true,
                     newMerged:true,
@@ -91,6 +97,7 @@ export default class Game extends Component {
         });
     }
 
+    //Check movable
     isMovable() {
         let movable = false;
         let cells = this.state.cells;
@@ -125,6 +132,7 @@ export default class Game extends Component {
         });
     }
 
+    //the move operation
     move (dir) {
         if (this.isMoving) return;
         let size = this.state.size;
@@ -172,7 +180,6 @@ export default class Game extends Component {
                 } else {
                     nextCol -= dirOffset[0];
                     nextRow -= dirOffset[1];
-
                     if (nextCol !== col || nextRow !== row) {
                         cells[nextRow][nextCol] = cell;
                         cells[row][col] = null;
@@ -196,7 +203,6 @@ export default class Game extends Component {
                 return nextState;
             });
 
-
             this.sleep(80)
                 .then(()=> {
                     this.newTile();
@@ -206,6 +212,11 @@ export default class Game extends Component {
         }
     }
 
+    /*
+        check the status of the game now.
+        if not movable, gameover.
+        store the score if it is higher than now.
+    */
     checkGameStatus() {
         let movable = this.isMovable();
         if(!movable) {
@@ -242,6 +253,10 @@ export default class Game extends Component {
         });
     }
 
+    /*
+        Start the new game.
+        Generate two new tiles.
+    */
     startNewGame() {
         setTimeout(() => {
             tileUUID = 0;

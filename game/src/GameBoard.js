@@ -3,6 +3,7 @@ import ScoreBoard from './ScoreBoard';
 import Tile from './Tile';
 import './GameBoard.css';
 
+//Create Tiles
 class TileContainer extends Component {
     getTiles () {
         return this.props.cells.reduce((tiles, row, i) =>
@@ -29,6 +30,7 @@ class TileContainer extends Component {
     }
 }
 
+//Create the Grids
 class GridContainer extends Component {
     shouldComponentUpdate({nextSize}) {
         let {size} = this.props;
@@ -51,6 +53,7 @@ class GridContainer extends Component {
     }
 }
 
+//generate the gameboard
 export default function GameBoard (props) {
     return (
         <div className="gameBoard">

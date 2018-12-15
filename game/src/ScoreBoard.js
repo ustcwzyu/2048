@@ -31,6 +31,7 @@ class ScoreBoard extends Component {
         return(
             <div className="scoreBoard">
                 <h1 className="title">2048</h1>
+                {/* current Scorebox */}
                 <ScoreBox score={props.score} label="Score">
                     {
                         props.additionScores.map((score, i) => 
@@ -39,6 +40,7 @@ class ScoreBoard extends Component {
                         >+{score.score}</div>)
                     }
                 </ScoreBox>
+                {/* best Scorebox */}
                 <ScoreBox score = {props.bestScore} label="Best"></ScoreBox>
                 <div className="text">
                     <span className="bold">Move and Get the Highest Score</span>

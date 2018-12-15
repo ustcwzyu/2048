@@ -7,7 +7,7 @@ const Tile_Gap = 10;
 class Tile extends Component {
     render() {
         let{cell, col, row} = this.props;
-        //the defination of the tile classes
+        //the definition of the tile classes
         let classMap = {
             tile: true,
             [`tile-${cell.number}`]: true,
@@ -16,6 +16,7 @@ class Tile extends Component {
             //Mark the new tile which is merged
             'tile-merged': !!cell.newMerged
         };
+        //the definition of the classNames
         let classNames = Object.keys(classMap).filter(cls => !!classMap[cls]).join(' ');
         let x = col * (Tile_Width + Tile_Gap) + 'px';
         let y = row * (Tile_Width + Tile_Gap) + 'px';
